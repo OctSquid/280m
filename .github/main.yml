@@ -1,0 +1,37 @@
+name: Monthly Update
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'  # Runs at 00:00 on the 1st of every month
+
+jobs:
+  update-files:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up date variables
+      id: date
+      run: |
+        echo "::set-output name=year::$(date +'%Y')"
+        echo "::set-output name=month::$(date +'%m')"
+
+    - name: Download adblock file
+      run: |
+        curl -o adfilter.txt "https://280blocker.net/files/280blocker_adblock_${{ steps.date.outputs.year }}${{ steps.date.outputs.month }}.txt"
+
+    - name: Download domain filter file
+      run: |
+        curl -o domain_filter.txt "https://280blocker.net/files/280blocker_domain_ag_${{ steps.date.outputs.year }}${{ steps.date.outputs.month }}.txt"
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add adfilter.txt domain_filter.txt
+        git commit -m "Update filters for ${{ steps.date.outputs.year }}-${{ steps.date.outputs.month }}"
+        git push origin main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
