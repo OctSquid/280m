@@ -1,8 +1,8 @@
 name: Monthly Update
 
 on:
-  schedule:
-    - cron: '0 0 1 * *'  # Runs at 00:00 on the 1st of every month
+  # schedule:
+  #   - cron: '0 0 1 * *'  # Runs at 00:00 on the 1st of every month
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
