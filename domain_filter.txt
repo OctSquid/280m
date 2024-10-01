@@ -1,3 +1,5 @@
+# Lastupdate: 2024-09-12
+
 ||domain.dummy280280.net^
 ||check.dummy280280.net^
 ||pagead2.googlesyndication.com^
@@ -2856,6 +2858,27 @@
 ||sunriseholler.com^
 ||jt.whunpainty.com^
 ||realisticwindow.com^
+||tuckedmajor.com^
+||whinemalnutrition.com^
+||toprevenuegate.com^
+||unfortunatelydroopinglying.com^
+||highcpmgate.com^
+||urgerrebasis.com^
+||st.zarebasdezaley.com^
+||ps.fungidcolder.com^
+||offshuppetchan.com^
+||js.onclckmn.com^
+||mcizas.com^
+||highcpmcreativeformat.com^
+||bogusnervousskier.com^
+||trustedgatetocontent.com^
+||discretionpollclassroom.com^
+||feelsjet.com^
+||deniedsolesummer.com^
+||highrevenuenetwork.com^
+||worthwhile-wash.com^
+||jl.withnimmunger.com^
+||hitchprivilege.com^
 
 @@||www.googleadservices.com^
 
